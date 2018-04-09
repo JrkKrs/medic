@@ -36,7 +36,7 @@ namespace WpfApp1
             if (e.Key == Key.Return)
             {
                 string pass = passwordBox.Password.ToString();
-                MessageBox.Show("twoje hasło to " + pass, "Error Title", MessageBoxButton.OK);
+                MessageBox.Show("twoje hasło to " + pass, "Error Title", MessageBoxButton.OK); // to jest tylko okienko co finalnie ma podać Ci info o błędynym haśle
             }
         }
     }
