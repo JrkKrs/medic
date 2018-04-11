@@ -24,6 +24,13 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+        //public static void ThreadProc()
+
+        //{
+            
+        //    Application.Run(new Form());
+
+        //}
 
         private void passwordBox_TouchEnter(object sender, TouchEventArgs e)
         {
@@ -36,7 +43,19 @@ namespace WpfApp1
             if (e.Key == Key.Return)
             {
                 string pass = passwordBox.Password.ToString();
-                MessageBox.Show("twoje hasło to " + pass, "Error Title", MessageBoxButton.OK); // to jest tylko okienko co finalnie ma podać Ci info o błędynym haśle
+                if (pass == "a") {
+                    //MessageBox.Show("twoje hasło to " + pass, "Error Title", MessageBoxButton.OK); // to jest tylko okienko co finalnie ma podać Ci info o błędynym haśle
+                    Window1 form2 = new Window1();
+                    form2.Show();
+
+                    //System.Threading.Thread t = new System.Threading.Thread(new System.Threading.ThreadStart(ThreadProc));
+
+                    //t.Start();
+                    //main_window.Close();
+
+                }
+                else
+                MessageBox.Show("nope", "Error Title", MessageBoxButton.OK); // to jest tylko okienko co finalnie ma podać Ci info o błędynym haśle
             }
         }
     }
